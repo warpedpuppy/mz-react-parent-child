@@ -6,15 +6,6 @@ export default class componentName extends Component {
       returnToParent: false
   }
   render() {
-    if (this.state.returnToParent) {
-        return <Parent />
-    } else {
-        return (
-        <>
-        <h1>hello I'm child</h1>
-        </>
-        )
-    }
-   
+        return (<h1>hello I'm child</h1> )
   }
 }
