@@ -1,17 +1,20 @@
 import React, { Component } from 'react';
 import Child from './Child';
-export default class componentName extends Component {
+export default class Parent extends Component {
 
   state = {
       seeChild: false,
       random:  Math.floor(Math.random() * 1000)
   }
+  changeBackToParent = (e) => {
+        e.preventDefault();
+        this.setState({seeChild: false})
+  }
   render() {
     if ( this.state.seeChild ) {
         return (
         <>
-        <Child />
-        <button onClick={() => this.setState({seeChild: false})}>see parent</button>
+        <Child goBack={this.changeBackToParent} />
         </>
         )
     }  else {
