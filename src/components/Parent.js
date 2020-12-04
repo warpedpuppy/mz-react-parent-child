@@ -8,7 +8,12 @@ export default class componentName extends Component {
   }
   render() {
     if ( this.state.seeChild ) {
-        return <Child />
+        return (
+        <>
+        <Child />
+        <button onClick={() => this.setState({seeChild: false})}>see parent</button>
+        </>
+        )
     }  else {
         return (
         <div> 

@@ -12,7 +12,6 @@ export default class componentName extends Component {
         return (
         <>
         <h1>hello I'm child</h1>
-        <button onClick={() => this.setState({returnToParent: true})}>return to parent</button>
         </>
         )
     }
