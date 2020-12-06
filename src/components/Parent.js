@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Child from './Child';
+import './Parent.css';
 export default class componentName extends Component {
 
   state = {
